@@ -58,11 +58,6 @@
   :type 'number
   :group 'slate)
 
-(defcustom slate-use-special-font-measure t
-  "Use a special font measuring function that works better with fonts that aren't purely monspaced."
-  :type 'boolean
-  :group 'slate)
-
 (defcustom slate-show-tags t
   "Whether to show tags or not."
   :type 'boolean
@@ -210,27 +205,10 @@
   "Append something to a list."
   (append list (list value)))
 
-(defun slate-get-font-width ()
-  "The `default-font-width' function returns incorrect values for some fonts on Windows. This is a workaround."
-  (let ((window (selected-window))
-        (remapping face-remapping-alist))
-    (with-temp-buffer
-      (make-local-variable 'face-remapping-alist)
-      (setq face-remapping-alist remapping)
-      (set-window-buffer window (current-buffer))
-      (insert "m")
-      (aref (aref (font-get-glyphs (font-at 1) 1 2) 0) 4))))
-
 
 (defun slate-get-window-width ()
   "Return current width of window displaying `slate-buffer'."
-  (let* ((window (get-buffer-window slate-buffer))
-         (window-width (window-pixel-width window))
-         (font-width (if slate-use-special-font-measure
-                         (slate-get-font-width)
-                       (default-font-width))))
-    (when window
-      (- (/ window-width font-width) 1))))
+  (- (window-text-width) 1))
 
 (defun slate-buffer-visible-p ()
   "Return non-nil if a window is displaying `slate-buffer'."
