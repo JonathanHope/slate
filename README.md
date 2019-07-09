@@ -1,40 +1,40 @@
 
 # Table of Contents
 
-1.  [Slate](#org0a8b36a)
-    1.  [Overview](#org8955bca)
-    2.  [Usage](#org4b7a5eb)
-    3.  [Installation](#org0fbe6b6)
+1.  [slate](#org59127d7)
+    1.  [Overview](#org0103b8b)
+    2.  [Usage](#org69fa357)
+    3.  [Installation](#org7eda32a)
 
 
-<a id="org0a8b36a"></a>
+<a id="org59127d7"></a>
 
-# Slate
+# slate
 
 Figure out what you have slated&#x2026;..
 
 ![img](slate.png)
 
 
-<a id="org8955bca"></a>
+<a id="org0103b8b"></a>
 
 ## Overview
 
-Slate is an app built in emacs that gathers TODO entries from a directory of org files. It does this using rg so many files can quickly be scanned.
+slate is an app built in emacs that gathers TODO entries from a directory of org files. It does this using rg so many files can quickly be scanned.
 
 The list can be incrementally filtered down by typing and hitting enter will take you to the selected TODO entry.
 
 The list is ordered by priority and contains priority, file name, line number, the text, and tags.
 
 
-<a id="org4b7a5eb"></a>
+<a id="org69fa357"></a>
 
 ## Usage
 
 Slate can be started by calling slate. If you want to refresh the list call slate-refresh.
 
 
-<a id="org0fbe6b6"></a>
+<a id="org7eda32a"></a>
 
 ## Installation
 
