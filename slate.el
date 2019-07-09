@@ -24,7 +24,7 @@
 
 ;;; Commentary:
 
-;; Slate is a major mode that gathers the TODOS from all org files in a directory.
+;; slate is a major mode that gathers the TODOS from all org files in a directory.
 ;; Those TODOS are then displayed in a list that can be used to visit those files.
 
 ;;; Code:

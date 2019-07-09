@@ -1,4 +1,4 @@
-* Slate
+* slate
 
 Figure out what you have slated.....
 
@@ -6,7 +6,7 @@ Figure out what you have slated.....
 
 ** Overview
 
-Slate is an app built in emacs that gathers TODO entries from a directory of org files. It does this using rg so many files can quickly be scanned.
+slate is an app built in emacs that gathers TODO entries from a directory of org files. It does this using rg so many files can quickly be scanned.
 
 The list can be incrementally filtered down by typing and hitting enter will take you to the selected TODO entry.
 
